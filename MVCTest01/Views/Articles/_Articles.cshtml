@@ -1,0 +1,32 @@
+﻿
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "DivTest";
+}
+
+<div class="siteMain">
+	<div class="subHeader">
+		<div class="imgHeader">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+		</div>
+		<div class="txtHeader"><span class="col-lg-1"></span><h2>@ViewBag.Massage</h2></div>
+
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-xs-2" id="sidebar" role="navigation">
+				<ul class="nav" style="margin-left: 0px">
+					<li class="active">@Html.ActionLink("Home", "Index", "Articles")</li>
+					<li>@Html.ActionLink("Fish", "Fish", "Articles")</li>
+					<li><a href="#">Applection </a></li>
+					<li><a href="#">BullShit</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-10 container">
+					@RenderBody()
+				
+			</div>
+		</div>
+	</div>
+</div>
+
